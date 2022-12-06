@@ -76,7 +76,7 @@ fn main() {
     match std::fs::create_dir(&inputs_dir) {
         Ok(_) => {},
         Err(e) => {
-            eprintln!("Failed to create inputs dir: \"{}\"", &inputs_dir);
+            eprintln!("Failed to create inputs dir: \"{}\": {}", &inputs_dir, e);
             process::exit(1);
         }
     }
